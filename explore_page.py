@@ -6,8 +6,13 @@ from pathlib import Path
 
 @st.cache_data
 def load_data():
-    file_path = Path("https://raw.githubusercontent.com/ezekielmose/Stroke_model_explore/refs/heads/main/healthcare-dataset-stroke-data.csv")
-    dataset = pd.read_csv(file_path)
+    url = "https://raw.githubusercontent.com/ezekielmose/StrokeModel/main/your_file.csv"  # Update with the correct URL
+    try:
+        dataset = pd.read_csv(url)
+        return dataset
+    except Exception as e:
+        st.error(f"Error loading data: {e}")
+        return None
 
     # checking for the null values
     dataset.isnull().sum()
