@@ -8,7 +8,9 @@ from pathlib import Path
 def load_data():
     url = "https://raw.githubusercontent.com/ezekielmose/Stroke_model_explore/refs/heads/main/healthcare-dataset-stroke-data.csv"  # Update with the correct URL
     dataset = pd.read_csv(url)
-    
+
+
+    st.write("Dataset3 Preview:", dataset)
 
     # checking for the null values
     dataset.isnull().sum()
