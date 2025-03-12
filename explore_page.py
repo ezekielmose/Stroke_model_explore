@@ -9,9 +9,6 @@ def load_data():
     url = "https://raw.githubusercontent.com/ezekielmose/Stroke_model_explore/refs/heads/main/healthcare-dataset-stroke-data.csv"  # Update with the correct URL
     dataset = pd.read_csv(url)
 
-
-    st.write("Dataset3 Preview:", dataset)
-
     # checking for the null values
     dataset.isnull().sum()
     # calculating the mean for bmi column to do imputation
@@ -27,6 +24,8 @@ def load_data():
 
 
 dataset3 = load_data()
+
+st.write("Dataset3 Preview:", dataset3)
 
 
 def show_explore_page():
