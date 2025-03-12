@@ -25,7 +25,7 @@ def load_data():
 
 dataset3 = load_data()
 
-st.write("Dataset3 Preview:", dataset3)
+#st.write("Dataset3 Preview:", dataset3)
 
 
 def show_explore_page():
