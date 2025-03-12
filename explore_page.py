@@ -7,12 +7,8 @@ from pathlib import Path
 @st.cache_data
 def load_data():
     url = "https://raw.githubusercontent.com/ezekielmose/StrokeModel/main/your_file.csv"  # Update with the correct URL
-    try:
-        dataset = pd.read_csv(url)
-        return dataset
-    except Exception as e:
-        st.error(f"Error loading data: {e}")
-        return None
+    dataset = pd.read_csv(url)
+    
 
     # checking for the null values
     dataset.isnull().sum()
