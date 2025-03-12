@@ -36,13 +36,7 @@ def show_explore_page():
     st.title("Model Dashboard")
 
     # PIE CHART
-    st.write("Pie Chart")
-    value_counts_wt = dataset3.work_type.value_counts()
 
-    fig1, ax1 = plt.subplots()
-    ax1.pie(value_counts_wt, labels=value_counts_wt.index, shadow= True, autopct="%1.f%%")
-    ax1.axis("equal")
-    st.pyplot(fig1)
 
     st.markdown("<hr style='border:3px solid black'>", unsafe_allow_html=True)
 
