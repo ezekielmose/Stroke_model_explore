@@ -6,7 +6,7 @@ from pathlib import Path
 
 @st.cache_data
 def load_data():
-    file_path = Path("E:/Sankhyana Training/Datasets/Healthcare/healthcare-dataset-stroke-data.csv")
+    file_path = Path("https://raw.githubusercontent.com/ezekielmose/Stroke_model_explore/refs/heads/main/healthcare-dataset-stroke-data.csv")
     dataset = pd.read_csv(file_path)
 
     # checking for the null values
